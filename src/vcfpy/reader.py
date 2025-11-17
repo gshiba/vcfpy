@@ -192,13 +192,10 @@ class Reader:
         """
         if self.tabix_iter:
             result = self.parser.parse_line(str(next(self.tabix_iter)))
-            if result is None:
-                raise StopIteration()
-            else:
-                return result
         else:
             result = self.parser.parse_next_record()
-            if result is None:
-                raise StopIteration()
-            else:
-                return result
+
+        if result is None:
+            raise StopIteration()
+
+        return result

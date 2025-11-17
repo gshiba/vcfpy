@@ -1316,7 +1316,7 @@ wheels = [
 
 [[package]]
 name = "vcfpy"
-version = "0.14.1"
+version = "0.14.2"
 source = { editable = "." }
 
 [package.dev-dependencies]
